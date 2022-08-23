@@ -17,7 +17,19 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// Route::get('/', function () {
+//     return view('home');
+// });
+
 Route::get('/', function () {
-    return view('home');
+
+    $owner = 'Jack';
+
+    $data= [
+        'name' => $owner,
+        'lastname' => '',
+        'students' => ['franco', 'ciro', 'canario']
+    ];
+    return view('home', $data);
 });
 
